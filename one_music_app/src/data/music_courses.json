@@ -8,7 +8,7 @@
         "price": 99.99,
         "instructor": "John Doe",
         "isFeatured": true,
-        "image": "/courses/guitar.jpg" 
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHJCy7_tMLbeq_X2haxyxIGvmDA7SvXXGopg&s" 
       },
       {
         "id": 2,
@@ -18,18 +18,9 @@
         "price": 109.99,
         "instructor": "Jane Smith",
         "isFeatured": false,
-        "image": "/courses/piano.jpg" 
+        "image": "https://millersmusic.co.uk/cdn/shop/articles/Blog_Image_36.png?v=1678962237" 
       },
-      {
-        "id": 3,
-        "title": "Advanced Vocal Techniques",
-        "slug": "advanced-vocal-techniques",
-        "description": "Enhance your singing with advanced vocal techniques for intermediate to advanced learners.",
-        "price": 119.99,
-        "instructor": "Emily Johnson",
-        "isFeatured": true,
-        "image": "/courses/vocalist.jpg" 
-      },
+      
       {
         "id": 4,
         "title": "Drumming Mastery",
@@ -38,7 +29,7 @@
         "price": 129.99,
         "instructor": "Mike Brown",
         "isFeatured": false,
-        "image": "/courses/drumming.jpg"
+        "image": "https://i0.wp.com/www.thedomesticmusician.com/wp-content/uploads/2019/12/shutterstock_613520144.jpg?fit=1000%2C649&ssl=1"
       },
       {
         "id": 5,
@@ -48,17 +39,7 @@
         "price": 139.99,
         "instructor": "Chris Davis",
         "isFeatured": false,
-        "image": "/courses/jazz.jpg"
-      },
-      {
-        "id": 6,
-        "title": "Music Production Fundamentals",
-        "slug": "music-production-fundamentals",
-        "description": "Dive into music production with this introductory course on the basics of sound engineering and mixing.",
-        "price": 149.99,
-        "instructor": "Alex Wilson",
-        "isFeatured": true,
-        "image": "/courses/music-prod.jpg"
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzpDbuxqxbSnNzSMwZB4I-ELgzKRICMMNiXQ&s"
       },
       {
         "id": 7,
@@ -68,37 +49,7 @@
         "price": 159.99,
         "instructor": "Samantha Miller",
         "isFeatured": false,
-        "image": "/courses/song-writing.jpg"
-      },
-      {
-        "id": 8,
-        "title": "Electronic Music Production",
-        "slug": "electronic-music-production",
-        "description": "Create compelling electronic music with our course designed for beginners to advanced users.",
-        "price": 169.99,
-        "instructor": "Luke Harris",
-        "isFeatured": true,
-        "image": "/courses/music-prod.jpg"
-      },
-      {
-        "id": 9,
-        "title": "Classical Music History",
-        "slug": "classical-music-history",
-        "description": "Explore the rich history of classical music from its origins to the present day.",
-        "price": 179.99,
-        "instructor": "Grace Lee",
-        "isFeatured": false,
-        "image": "/courses/classical-music.jpg"
-      },
-      {
-        "id": 10,
-        "title": "Blues Guitar Techniques",
-        "slug": "blues-guitar-techniques",
-        "description": "Discover the techniques of blues guitar to add soul and depth to your playing.",
-        "price": 189.99,
-        "instructor": "Ethan Moore",
-        "isFeatured": true,
-        "image": "/courses/blues.jpg"
+        "image": "https://cymatics.fm/cdn/shop/articles/Songwriting-Tips-Yoast_1200x1200.jpg?v=1552056900"
       }
     ]
   }
