@@ -2,7 +2,7 @@ import nodemailer from "nodemailer";
 import User from "@/models/userModel";
 import bcrypt from "bcryptjs";
 import { NextResponse } from "next/server";
-
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const sendEmail =  async ({email,emailType,userId} :any) => {
     try {
         // create a hashed token
@@ -18,7 +18,7 @@ export const sendEmail =  async ({email,emailType,userId} :any) => {
             forgotPasswordTokenExpiry: Date.now() + 3600000
         })
         }
-        var transport = nodemailer.createTransport({
+        const transport = nodemailer.createTransport({
             host: "sandbox.smtp.mailtrap.io",
             port: 2525,
             auth: {
@@ -38,7 +38,9 @@ export const sendEmail =  async ({email,emailType,userId} :any) => {
 
         const mailResponse = await transport.sendMail(mailOptions);
         return mailResponse;
-    } catch (error:any) {
+    } 
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    catch (error:any) {
         console.log("Mail error")
         return NextResponse.json({error:error.message},{status:400})
     }

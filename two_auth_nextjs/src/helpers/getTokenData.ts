@@ -4,10 +4,13 @@ import  jwt  from "jsonwebtoken";
 export default function getTokenData(request:NextRequest){
 try {
     const encodedToken = request.cookies.get('token')?.value || '';
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const decodedToken:any = jwt.verify(encodedToken,process.env.TOKEN_SECRET!);
     console.log("DT",decodedToken.id)
     return decodedToken.id
-} catch (error:any) {
+} 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+catch (error:any) {
     throw new Error(error.message)
 }
 }

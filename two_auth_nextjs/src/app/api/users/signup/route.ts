@@ -37,7 +37,9 @@ export async function POST(request:NextRequest){
         await sendEmail({email,emailType:"VERIFY",userId:savedUser._id})
 
         return NextResponse.json({message: "Successfully creates user",success:true,savedUser},{status:201})
-    } catch (error: any) {
+    } 
+     // eslint-disable-next-line @typescript-eslint/no-explicit-any 
+    catch (error: any) {
         console.log("Signup error",error)
         return NextResponse.json({error: error.message},{status:500})
     }

@@ -21,7 +21,9 @@ export default function LoginPage() {
         console.log("Login success",response.data)
         toast.success("Login success")
         router.push('/profile')
-      } catch (error:any) {
+      }
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+       catch (error:any) {
         console.log("Login failed",error.message)
         toast.error(error.message)
       }finally{
@@ -35,7 +37,8 @@ export default function LoginPage() {
         },[user])
   return (
     <div className="flex flex-col items-center justify-center min-h-screen py-2">
-      <h1 >Login</h1>
+      
+      <h1 >{loading ? "Processing" : "Login"}</h1>
       <hr/>
       
       <label htmlFor="email">Email</label>
@@ -57,6 +60,7 @@ export default function LoginPage() {
       placeholder="password"
       />
       <button 
+      disabled={buttonDisabled}
       onClick={onLogin}
       className="p-2 m-2 border border-gray-400 rounded-2xl focus:outline-none focus:border-gray-600">Login</button>
       <Link href={"/signup"}>Visit signup page</Link>

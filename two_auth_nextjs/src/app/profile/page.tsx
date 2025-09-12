@@ -13,7 +13,9 @@ export default function ProfilePage(){
       await axios.get('api/users/logout')
       toast.success("Logout successful")
       router.push('/login')
-    } catch (error:any) {
+    } 
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    catch (error:any) {
         console.log("Logout failed",error.message)
         toast.error(error.message)
     }

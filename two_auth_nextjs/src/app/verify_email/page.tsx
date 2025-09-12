@@ -1,7 +1,6 @@
 "use client";
 import React,{useEffect, useState} from "react";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
 import axios from "axios";
 
 export default  function VerifyEmailPage() {
@@ -12,16 +11,18 @@ export default  function VerifyEmailPage() {
     const verifyUserEmail=async()=>{
         try {
             await axios.post('/api/users/verify_email',{token})
-        } catch (error:any) {
+            setVerified(true)
+        } 
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        catch (error:any) {
             console.log("verifyUserEmail error",error.response.data)
             setError(true)
         }
     }
-
+// eslint-disable-next-line react-hooks/exhaustive-deps
     useEffect(()=>{
         if(token.length>0){
-            verifyUserEmail()
-        }
+            verifyUserEmail();}
     },[token])
     useEffect(()=>{
        const urlToken = window.location.search.split("=")[1];
