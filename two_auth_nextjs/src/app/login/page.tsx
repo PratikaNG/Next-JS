@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import axios from "axios";
 import toast from "react-hot-toast";
-
+import {v1_url} from "@/app/api/url_constants"
 export default function LoginPage() {
   const router = useRouter();
   const [buttonDisabled,setButtonDisabled] = useState(false)
@@ -17,7 +17,7 @@ export default function LoginPage() {
     const onLogin = async()=>{
  try {
         setLoading(true)
-        const response = await axios.post("/api/user/login",user)
+        const response = await axios.post(v1_url.login_url,user)
         console.log("Login success",response.data)
         toast.success("Login success")
         router.push('/profile')
