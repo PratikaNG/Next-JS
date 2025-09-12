@@ -27,18 +27,25 @@ export default function ProfilePage(){
     setData(res.data.data._id)
   }
     return(
-        <div className="flex flex-col items-center justify-center min-h-screen py-2">
-      <h1 >Profile</h1>
-      <hr/>
-      <h2 className="p-2 rounded bg-green-500">{data === "nothing" ? "Nothing " :<Link href={`/profile/${data}`}>{data}</Link>}</h2>
-      <hr/>
-      
-      <button 
+      <>
+      <nav className="p-4 m-2  flex justify-between items-center">
+        <h2 className="text-4xl">Profile</h2>
+        <button 
       onClick={onLogout}
       className="p-2 bg-blue-400 border border-gray-300 m-2 text-white text-2xl rounded">Logout</button>
+      </nav>
+      
+      <div className="flex flex-col items-center justify-center min-h-screen py-2">
       <button 
       onClick={getUserDetails}
       className="py-2 px-4 bg-green-400 m-2 text-white text-2xl rounded">getUserDetails</button>
+      <hr/>
+      <h2 className="p-2 rounded">{data === "nothing" ? "Nothing " : <span>Click here details screen: <Link href={`/profile/${data}`} className="text-amber-200 underline">{data}</Link></span>}</h2>
+      <hr/>
+      
+      
+      
         </div>
+        </>
     )
 }

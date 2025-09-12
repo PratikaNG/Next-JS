@@ -36,12 +36,13 @@ export default function LoginPage() {
           }else setButtonDisabled(true)
         },[user])
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen py-2">
+    <div className="flex flex-col items-center justify-center min-h-screen py-2 bg-slate-300">
       
-      <h1 >{loading ? "Processing" : "Login"}</h1>
+      <h1 className="text-3xl md:text-5xl text-pink-700">{loading ? "Processing" : "Login"}</h1>
       <hr/>
-      
-      <label htmlFor="email">Email</label>
+      <div className="p-6 m-4 rounded border border-amber-50 flex flex-col items-center justify-around bg-slate-900">
+      <div className="flex flex-col md:flex-row justify-between items-baseline gap-2 w-full">
+      <label htmlFor="email">Email: </label>
       <input
       className="p-2 border border-gray-300 rounded-lg mb-4 focus:outline-none focus:border-gray-600 bg-white text-black"
       id="email"
@@ -49,8 +50,9 @@ export default function LoginPage() {
       value={user.email}
       onChange={(e)=>setUser({...user,email:e.target.value})}
       placeholder="email"
-      />
-      <label htmlFor="email">Password</label>
+      /></div>
+      <div className="flex flex-col md:flex-row justify-between items-baseline gap-2 w-full">
+      <label htmlFor="email">Password: </label>
       <input
       className="p-2 border border-gray-300 rounded-lg mb-4 focus:outline-none focus:border-gray-600 bg-white text-black"
       id="password"
@@ -58,12 +60,15 @@ export default function LoginPage() {
       value={user.password}
       onChange={(e)=>setUser({...user,password:e.target.value})}
       placeholder="password"
-      />
+      /></div>
+      <div className="flex justify-between items-center gap-2 border border-t-2 border-b-2 border-l-0 border-r-0 mt-3 mb-1">
       <button 
       disabled={buttonDisabled}
       onClick={onLogin}
-      className="p-2 m-2 border border-gray-400 rounded-2xl focus:outline-none focus:border-gray-600">Login</button>
-      <Link href={"/signup"}>Visit signup page</Link>
+      className="p-2 m-2 border border-gray-400 rounded focus:outline-none focus:border-gray-600">Login</button>
+      <div className="text-3xl text-pink-700 m-4">|</div>
+      <Link href={"/signup"}>Visit signup page</Link></div>
+      </div>
     </div>
   )
 }
